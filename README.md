@@ -1,6 +1,6 @@
 # brew-pkg
 
-brew-pkg is a Homebrew external command that builds an OS X installer package from a formula. The formula must first already be installed on the system.
+brew-pkg is a Homebrew external command that builds an macOS installer package from a formula. The formula must first already be installed on the system.
 
 ## Usage
 
@@ -30,9 +30,9 @@ By default behaviour brew pkg include all package kegs located in /usr/local/Cel
 
 ## Installing it
 
-brew-pkg is available from my [formulae tap](https://github.com/timsutton/homebrew-formulae). Add the tap:
+brew-pkg is available from my [formulae tap](https://github.com/jordanljohnson/homebrew-formulae). Add the tap:
 
-`brew tap timsutton/formulae`
+`brew tap jordanljohnson/formulae`
 
 Then install as any other formula:
 
@@ -49,4 +49,4 @@ For more information refer to `man pkgbuild` which explains that *`--scripts scr
 
 ## License
 
-brew-pkg is [MIT-licensed](https://github.com/timsutton/brew-pkg/blob/master/LICENSE.md).
+brew-pkg is [MIT-licensed](https://github.com/jordanljohnson/brew-pkg/blob/master/LICENSE.md).

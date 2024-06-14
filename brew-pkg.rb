@@ -1,4 +1,4 @@
-# Builds an OS X installer package from an installed formula.
+# Builds an macOS installer package from an installed formula.
 require 'formula'
 require 'optparse'
 require 'tmpdir'
@@ -15,10 +15,10 @@ module Homebrew extend self
     unpack_usage = <<-EOS
 Usage: brew pkg [--identifier-prefix] [--with-deps] [--without-kegs] formula
 
-Build an OS X installer package from a formula. It must be already
+Build an macOS installer package from a formula. It must be already
 installed; 'brew pkg' doesn't handle this for you automatically. The
 '--identifier-prefix' option is strongly recommended in order to follow
-the conventions of OS X installer packages.
+the conventions of macOS installer packages.
 
 Options:
   --identifier-prefix     set a custom identifier prefix to be prepended
