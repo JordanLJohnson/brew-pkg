@@ -71,7 +71,7 @@ Options:
       ohai "Staging formula #{formula.name}"
       # Get all directories for this keg, rsync to the staging root
 
-      if File.exists?(File.join(HOMEBREW_CELLAR, formula.name, dep_version))
+      if File.exist?(File.join(HOMEBREW_CELLAR, formula.name, dep_version))
 
         dirs = Pathname.new(File.join(HOMEBREW_CELLAR, formula.name, dep_version)).children.select { |c| c.directory? }.collect { |p| p.to_s }
 
@@ -79,7 +79,7 @@ Options:
         dirs.each {|d| safe_system "rsync", "-a", "#{d}", "#{staging_root}/" }
 
 
-        if File.exists?("#{HOMEBREW_CELLAR}/#{formula.name}/#{dep_version}") and not ARGV.include? '--without-kegs'
+        if File.exist?("#{HOMEBREW_CELLAR}/#{formula.name}/#{dep_version}") and not ARGV.include? '--without-kegs'
 
           ohai "Staging directory #{HOMEBREW_CELLAR}/#{formula.name}/#{dep_version}"
 
@@ -107,12 +107,12 @@ Options:
       if File.directory?(scripts_path)
         pre = File.join(scripts_path,"preinstall")
         post = File.join(scripts_path,"postinstall")
-        if File.exists?(pre)
+        if File.exist?(pre)
           File.chmod(0755, pre)
           found_scripts = true
           ohai "Adding preinstall script"
         end
-        if File.exists?(post)
+        if File.exist?(post)
           File.chmod(0755, post)
           found_scripts = true
           ohai "Adding postinstall script"
